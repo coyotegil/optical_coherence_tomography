@@ -16,6 +16,9 @@ pre_processing:
   #Split
   train_val_split : 0.98
   warmup_split : 0.05
+
+  # Model
+  input : "mobilenet"
   
   # Augmentation
   featurewise_center : False
@@ -66,8 +69,8 @@ fit:
   class_weight :
   sample_weight : 
   initial_epoch : 0
-  steps_per_epoch : 2557 # needs to be an integer// calculated as training Sample size // Batch Size
-  validation_steps :  53 # needs to be an integer// calculated as Validation Sample size // Batch Size
+  steps_per_epoch : 128 # needs to be an integer// calculated as training Sample size // Batch Size
+  validation_steps :  53   # needs to be an integer// calculated as Validation Sample size // Batch Size
   validation_batch_size : 
   validation_freq : 1
   max_queue_size : 10
